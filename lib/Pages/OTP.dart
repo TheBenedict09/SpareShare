@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:spareshare/Pages/HomePage.dart';
 
 class OTPpage extends StatefulWidget {
   const OTPpage({super.key});
@@ -69,7 +70,12 @@ class _OTPpageState extends State<OTPpage> {
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(21)),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(context,
+                        MaterialPageRoute(builder: (context) {
+                      return HomePage();
+                    }));
+                  },
                   child: Text(
                     'Verify OTP',
                     style: Theme.of(context).textTheme.headline1?.copyWith(

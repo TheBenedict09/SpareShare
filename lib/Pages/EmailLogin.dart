@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:spareshare/Pages/HomePage.dart';
 
 class EmailLogin extends StatefulWidget {
   const EmailLogin({super.key});
@@ -113,8 +114,9 @@ class _EmailLoginState extends State<EmailLogin> {
                   BoxDecoration(borderRadius: BorderRadius.circular(21)),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return EmailLogin();
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) {
+                    return HomePage();
                   }));
                 },
                 child: Text(

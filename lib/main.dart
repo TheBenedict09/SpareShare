@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:spareshare/Pages/HomePage.dart';
 import 'package:spareshare/Pages/login_page.dart';
 //import 'package:spareshare/Pages/splash_screen.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           textTheme: TextTheme(
               headline1: TextStyle(fontFamily: 'Nunito', fontSize: 24))),
-      home: const LoginPage(),
+      home: LoginPage(),
       debugShowCheckedModeBanner: false,
     );
   }
