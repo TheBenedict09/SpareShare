@@ -1,6 +1,6 @@
 # spareshare
 
-A new Flutter project.
+An Extra Food Management App.
 
 ## Getting Started
 
