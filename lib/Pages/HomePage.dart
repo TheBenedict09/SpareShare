@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:spareshare/Pages/Cart.dart';
 import 'package:spareshare/Refractor_Items/TcarouselImages.dart';
 import 'package:spareshare/utils/constants/Image_string.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
-  final List<String> imageUrls = [
-    'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Ffood&psig=AOvVaw38qTsd3OlaEP27tSh5gOUb&ust=1708452454437000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDOocD_t4QDFQAAAAAdAAAAABAa',
-    // 'https://example.com/image2.jpg',
-    //'https://example.com/image3.jpg',
-  ];
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -27,36 +23,45 @@ class _HomePageState extends State<HomePage> {
           children: [
             Container(
               width: double.infinity,
-              height: 215,
+              height: 180,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(21),
                       bottomRight: Radius.circular(21)),
                   gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                       colors: [
-                        Color(0xffCC2A49),
-                        Color(0xffF99E4C),
+                        Color(0xffCC2A49).withOpacity(0.9),
+                        Color(0xffF99E4C).withOpacity(0.9),
                         //Color(0xffF36F38),
                       ])),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    height: 80,
+                    height: 50,
                   ),
                   Container(
-                    width: 370,
+                    width: 380,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(FontAwesomeIcons.locationPin),
+                        IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.menu,
+                              color: Colors.black,
+                            )),
                         SizedBox(
-                          width: 5,
+                          width: 4,
                         ),
+                        Icon(FontAwesomeIcons.locationPin),
+                        // SizedBox(
+                        //   width: 1,
+                        // ),
                         ConstrainedBox(
-                          constraints: BoxConstraints(maxWidth: 290),
+                          constraints: BoxConstraints(maxWidth: 230),
                           child: Text(
                             'Apt. 493 53586 Del Stream, Graycestad, ND 30996',
                             overflow: TextOverflow.ellipsis,
@@ -69,12 +74,22 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           width: 3,
                         ),
-                        IconButton(onPressed: () {}, icon: Icon(Icons.menu))
+                        IconButton(
+                            onPressed: () {
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder: (context) {
+                                return Cart();
+                              }));
+                            },
+                            icon: Icon(
+                              FontAwesomeIcons.cartShopping,
+                              color: Colors.black,
+                            ))
                       ],
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 10,
                   ),
                   Container(
                     width: 370,
@@ -188,7 +203,7 @@ class _HomePageState extends State<HomePage> {
                               padding: const EdgeInsets.only(bottom: 21),
                               child: Container(
                                 width: 370,
-                                height: 250,
+                                height: 200,
                                 decoration: BoxDecoration(
                                     color: Colors.grey.shade300,
                                     borderRadius: BorderRadius.circular(21)),
@@ -238,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                                             height: 5,
                                           ),
                                           Container(
-                                            height: 170,
+                                            height: 120,
                                             width: 150,
                                             color: Colors.transparent,
                                             child: Padding(
