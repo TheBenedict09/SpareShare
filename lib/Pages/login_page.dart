@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
               Color(0xffF99E4C),
               Color(0xffF36F38),
               Color(0xffEF4648),
-              Color(0xff582841)
+              //Color(0xff582841)
             ])),
         child: SingleChildScrollView(
           child: Column(

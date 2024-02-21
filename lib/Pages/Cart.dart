@@ -167,9 +167,9 @@ class _CartState extends State<Cart> {
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                       colors: [
-                        Color(0xffF36F38).withOpacity(0.9),
-                        Color(0xffEF4648).withOpacity(0.9),
-                        Color(0xff582841).withOpacity(0.9),
+                        Color(0xffF99E4C).withOpacity(0.5),
+                        Color(0xffCC2A49).withOpacity(0.5),
+
                         //Color(0xffF36F38),
                       ]),
                   borderRadius: BorderRadius.only(

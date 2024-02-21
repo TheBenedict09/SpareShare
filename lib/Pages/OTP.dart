@@ -25,9 +25,9 @@ class _OTPpageState extends State<OTPpage> {
             Color(0xffF99E4C),
             Color(0xffF36F38),
             Color(0xffEF4648),
-            Color(0xff582841),
+            // Color(0xff582841),
           ],
-          stops: [0.0, 0.25, 0.5, 0.75, 1.0],
+          stops: [0.0, 0.25, 0.5, 0.75],
         )),
         child: SingleChildScrollView(
           child: Column(
