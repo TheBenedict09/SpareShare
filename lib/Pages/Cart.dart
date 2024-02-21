@@ -200,7 +200,7 @@ class _CartState extends State<Cart> {
                         child: Text(
                           'Order Now',
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Color(0xffCC2A49),
                               fontFamily: 'Nunito',
                               fontSize: 24),
                         ),
@@ -210,7 +210,7 @@ class _CartState extends State<Cart> {
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(21))),
                             backgroundColor: MaterialStatePropertyAll(
-                              Colors.black,
+                              Colors.white,
                             )),
                       ),
                     ),
