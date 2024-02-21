@@ -5,6 +5,7 @@ import 'package:spareshare/Pages/Side%20Menu%20Functionalties/Addresses.dart';
 import 'package:spareshare/Pages/Side%20Menu%20Functionalties/History.dart';
 import 'package:spareshare/Pages/Side%20Menu%20Functionalties/YourOrders.dart';
 import 'package:spareshare/Pages/Side_menu.dart';
+import 'package:spareshare/Pages/SplashScreen.dart';
 import 'package:spareshare/Pages/login_page.dart';
 
 void main() {
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
               headline1: TextStyle(fontFamily: 'Nunito', fontSize: 24),
               headline2: TextStyle(fontFamily: 'Nunito', fontSize: 17))),
-      home: LoginPage(),
+      home: SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
